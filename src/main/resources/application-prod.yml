@@ -1,0 +1,49 @@
+ms-settings:
+  port: 8010
+  path: /api/v1/settings
+  complete-path: http://settings:${ms-settings.port}
+
+ms-document:
+  port: 8012
+  path: /api/v1/document-manager
+  complete-path: http://document:${ms-document.port}
+
+ms-authorizer:
+  port: 8013
+  complete-path: http://authorizer:${ms-authorizer.port}
+  path: /api/v1/authorizer
+
+ms-safety-mesh:
+  port: 8019
+  complete-path: http://safety-mesh:${ms-safety-mesh.port}
+  path: /api/v1/column/permission
+
+ms-notification:
+  port: 8020
+  complete-path: http://notification:${ms-notification.port}
+  notification:
+    path: /api/v1/notification
+  template:
+    path: /api/v1/template
+
+ms-catalogs:
+  port: 8014
+  complete-path: http://catalogs:${ms-catalogs.port}
+  catalog:
+    path: /api/v1/catalog
+  catalog-item:
+    path: /api/v1/catalog-item
+  catalog-type:
+    path: /api/v1/catalog-type
+
+ms-workflow:
+  port: 8017
+  complete-path: http://workflow:${ms-workflow.port}
+  workflow:
+    path: /api/v1/workflow
+
+db-config:
+  domain: db-programs:5432
+  name: atenea_programs
+  user: postgres
+  password: VA@Atenea2023
